@@ -183,5 +183,3 @@
 //   }
 // }
 // fizzBuzz(15);
-
-const name = "Beatles";
