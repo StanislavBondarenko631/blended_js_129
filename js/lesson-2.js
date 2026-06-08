@@ -294,8 +294,23 @@ const phonebook = {
     return result;
   },
 
-  delete(name) {},
-  updateName(oldName, newName) {},
+  delete(name) {
+    for (let i = 0; i < this.contacts.length; i += 1) {
+      if (this.contacts[i].name === name) {
+        this.contacts.splice(i, 1);
+        return;
+      }
+    }
+  },
+
+  updateName(oldName, newName) {
+    for (const contact of this.contacts) {
+      if (contact.name === oldName) {
+        contact.name = newName;
+        return;
+      }
+    }
+  },
 
   generateId() {
     return "#" + Math.random().toString(36).substr(2, 9);
