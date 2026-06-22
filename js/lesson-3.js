@@ -305,56 +305,56 @@
 //  - department - відділ, в якому працює співробітник.
 // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
 
-class Person {
-  constructor({ name, age, gender, email }) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.email = email;
-  }
+// class Person {
+//   constructor({ name, age, gender, email }) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
 
-  getDetails() {
-    // return this;
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+//   getDetails() {
+//     // return this;
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person {
-  constructor({ salary, department, ...data }) {
-    super(data);
-    this.salary = salary;
-    this.department = department;
-  }
+// class Employee extends Person {
+//   constructor({ salary, department, ...data }) {
+//     super(data);
+//     this.salary = salary;
+//     this.department = department;
+//   }
 
-  getEmployeeDetails() {
-    return {
-      salary: this.salary,
-      department: this.department,
-    };
-  }
-}
+//   getEmployeeDetails() {
+//     return {
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
 
-const data = {
-  name: "Stanislav",
-  age: 18,
-  gender: "male",
-  email: "Stas@gmail.com",
-  salary: 5000,
-  department: "developer",
-};
-const person = new Person(data);
+// const data = {
+//   name: "Stanislav",
+//   age: 18,
+//   gender: "male",
+//   email: "Stas@gmail.com",
+//   salary: 5000,
+//   department: "developer",
+// };
+// const person = new Person(data);
 
-const emp = new Employee(data);
+// const emp = new Employee(data);
 
-console.log(person);
-console.log(person.getDetails());
-console.log(emp.getEmployeeDetails());
-console.log(emp.getDetails());
+// console.log(person);
+// console.log(person.getDetails());
+// console.log(emp.getEmployeeDetails());
+// console.log(emp.getDetails());
 
 //Підрахунок кількості повторень
 //Дано масив:
@@ -366,3 +366,17 @@ console.log(emp.getDetails());
 //  // banana: 2,
 //  // orange: 1
 // //}
+
+// const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+// const sum = fruits.reduce((accumulator, fruit) => {
+//   if (accumulator[fruit]) {
+//     accumulator[fruit] += 1;
+//   } else {
+//     accumulator[fruit] = 1;
+//   }
+
+//   return accumulator;
+// }, {});
+
+// console.log(sum);
